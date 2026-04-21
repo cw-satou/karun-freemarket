@@ -1,0 +1,69 @@
+databases:
+  - name: karun-freemarket-db
+    databaseName: karun_freemarket
+    user: karun_freemarket
+    plan: free
+
+services:
+  - type: web
+    name: karun-freemarket-backend
+    env: docker
+    rootDir: backend
+    dockerfilePath: ./Dockerfile
+    plan: free
+    envVars:
+      - key: APP_NAME
+        value: KarunFreemarket
+      - key: APP_ENV
+        value: production
+      - key: APP_DEBUG
+        value: false
+      - key: APP_KEY
+        generateValue: true
+      - key: APP_URL
+        value: https://karun-freemarket-backend.onrender.com
+
+      - key: DB_CONNECTION
+        value: pgsql
+      - key: DB_HOST
+        fromDatabase:
+          name: karun-freemarket-db
+          property: host
+      - key: DB_PORT
+        fromDatabase:
+          name: karun-freemarket-db
+          property: port
+      - key: DB_DATABASE
+        fromDatabase:
+          name: karun-freemarket-db
+          property: database
+      - key: DB_USERNAME
+        fromDatabase:
+          name: karun-freemarket-db
+          property: user
+      - key: DB_PASSWORD
+        fromDatabase:
+          name: karun-freemarket-db
+          property: password
+
+      - key: FILESYSTEM_DRIVER
+        value: public
+      - key: SESSION_DRIVER
+        value: cookie
+      - key: CACHE_DRIVER
+        value: array
+      - key: QUEUE_CONNECTION
+        value: sync
+
+      - key: CORS_ALLOWED_ORIGINS
+        sync: false
+      - key: SANCTUM_STATEFUL_DOMAINS
+        sync: false
+
+      - key: STRIPE_KEY
+        sync: false
+      - key: STRIPE_SECRET
+        sync: false
+
+      - key: MAIL_MAILER
+        value: log
