@@ -1,0 +1,317 @@
+.purchase-container {
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    gap: 40px;
+    max-width: 1530px;
+    margin: 0 auto;
+    padding: 40px 0;
+}
+.purchase__main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+.product-info {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+    margin-top: 40px;
+    margin-bottom: 10px;
+    max-width: 805px;
+}
+.purchase-img-wrapper {
+    width: 177.53px;
+    height: 177.53px;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+.purchase-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+.product-text {
+    display: flex;
+    flex-direction: column;
+    word-break: break-word;
+    max-width: 805px;
+}
+.product-name {
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 100%;
+    margin: 0;
+}
+.product-price {
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 100%;
+    color: #000;
+}
+.product-price__yen {
+    font-weight: 400;
+    font-size: 27px;
+    margin-right: 10px;
+}
+.purchase-separator {
+    border-top: 1px solid #000000;
+    width: 805px;
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: auto;
+}
+.section-title {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 5px;
+    line-height: 1.2;
+    color: #000;
+    margin-left: 40px;
+    margin-top: 0;
+}
+.payment-form {
+    position: relative;
+    width: 265px;
+    margin-left: 70px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: flex-end;
+}
+.payment-method {
+    box-sizing: border-box;
+    width: 235px;
+    height: 31px;
+    font-weight: 700;
+    border: 1px solid #5f5f5f;
+    border-radius: 4px;
+    font-size: 16px;
+    color: #5f5f5f;
+    padding: 4px 30px 4px 8px;
+    background-color: #fff;
+    appearance: none;
+    margin-left: 0;
+}
+.payment-option {
+    color: #5f5f5f;
+}
+.payment-form::after {
+    content: "▼";
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+    color: #5f5f5f;
+    font-size: 12px;
+}
+.sending-postcode,
+.sending-address {
+    margin: 10px 0 10px 100px;
+    font-size: 20px;
+    color: #000;
+    line-height: 1.2;
+    word-break: break-word;
+    max-width: calc(100% - 176px - 40px);
+}
+.address-header {
+    width: 805px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: auto;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    line-height: 100%;
+    margin-bottom: 4px;
+}
+.address-edit-form {
+    display: inline;
+}
+.address-edit-btn {
+    display: inline-block;
+    margin-top: 0;
+    padding: 6px 12px;
+    color: #0073cc;
+    text-decoration: none;
+    font-size: 20px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    line-height: 100%;
+    letter-spacing: 0%;
+    vertical-align: middle;
+    white-space: nowrap;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+.address-edit-btn:hover {
+    text-decoration: underline;
+}
+.error-message {
+    color: #d9534f;
+    margin-top: -20px;
+    margin-bottom: 4px;
+    display: block;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.7;
+    text-align: center;
+}
+.purchase__summary {
+    width: 440px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.summary-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.summary {
+    width: 440px;
+    height: 230px;
+    border: 1px solid #000000;
+    border-collapse: collapse;
+    margin: 40px 0;
+    table-layout: fixed;
+}
+.summary__label,
+.summary__value {
+    padding: 0 16px;
+    border-bottom: 1px solid #000;
+    vertical-align: middle;
+}
+.summary__label {
+    font-size: 20px;
+    font-weight: 400;
+    color: #000000;
+    text-align: center;
+    line-height: 115px;
+}
+.summary__value {
+    font-size: 24px;
+    font-weight: 400;
+    text-align: center;
+    line-height: 115px;
+    white-space: nowrap;
+}
+.purchase-btn {
+    width: 100%;
+    height: 60px;
+    background-color: #ff5555;
+    color: #fff;
+    font-size: 26px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 400;
+}
+.purchase-btn:hover {
+    background-color: #cc4444;
+}
+
+
+@media screen and (min-width: 1400px) and (max-width: 1540px) {
+    .purchase-container {
+        justify-content: center;
+        max-width: 1400px;
+        padding: 40px 20px;
+        margin: 0 auto;
+        gap: 40px;
+    }
+    .purchase__main {
+        max-width: 920px;
+        gap: 30px;
+    }
+    .product-info {
+        margin-left: 40px;
+    }
+    .product-text {
+        max-width: calc(920px - 177.53px - 50px);
+    }
+    .purchase__summary {
+        width: 440px;
+    }
+    .purchase-separator {
+        width: 805px;
+    }
+}
+
+
+@media screen and (min-width: 768px) and (max-width: 850px) {
+    .purchase-container {
+        margin-top: 80px;
+        flex-direction: column;
+        gap: 30px;
+        padding: 0 20px;
+        align-items: center;
+    }
+    .purchase__main,
+    .purchase__summary {
+        width: calc(100% - 100px);
+        margin: 0 auto;
+    }
+    .product-info {
+        justify-content: flex-start;
+        gap: 60px;
+    }
+    .purchase-separator {
+        width: 100%;
+        margin: 0;
+    }
+    .product-text {
+        gap: 6px;
+        text-align: left;
+    }
+    .payment-form {
+        width: 235px;
+    }
+    .payment-method {
+        width: 100%;
+    }
+    .payment-form::after {
+        right: 10px;
+    }
+    .section-title.payment {
+        margin-left: 20px;
+    }
+    .address-header .section-title {
+        margin-left: 20px;
+    }
+    .address-header {
+        width: 100%;
+        display: flex;
+        padding: 0;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .address-edit-btn {
+        margin: 0;
+        flex-shrink: 0;
+    }
+    .payment-form,
+    .sending-postcode,
+    .sending-address {
+        margin: 0 0 20px 60px;
+        max-width: 100%;
+    }
+    .summary {
+        width: 440px;
+        margin: 40px auto 20px auto;
+    }
+    .purchase-btn {
+        width: 440px;
+        margin: 30px auto;
+        display: block;
+    }
+    .summary__label,
+    .summary__value {
+        font-size: 18px;
+    }
+
+}
+
+

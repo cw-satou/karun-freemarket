@@ -1,0 +1,258 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+.header {
+    margin-top: 0;
+    width: 100%;
+    background-color: #000000;
+}
+.header__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    height: 80px;
+    width: 100%;
+    box-sizing: border-box;
+    max-width: 1540px;
+    margin: 0 auto;
+}
+.header__logo {
+    flex: 0 0 auto;
+    margin-left: -45px;
+}
+.logo {
+    margin-left: 0;
+    bottom: 27.5%;
+    height: 36px;
+    width: 370px;
+    background: #000000;
+}
+.header__search {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+.header__search form {
+    width: 500px;
+    height: 50px;
+    display: flex;
+}
+.header__search input {
+    height: 100%;
+    width: 100%;
+    padding: 8px 12px;
+    border-radius: 5px;
+    border: none;
+    font-size: 24px;
+    padding-left: 30px;
+}
+.header__nav {
+    flex-shrink: 0;
+    margin-left: auto;
+    min-width: 150px;
+}
+.header__nav ul {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+.header__nav li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 8px 12px;
+    font-size: 24px;
+    width: 130px;
+    height: 47px;
+}
+.header__nav li .nav__btn {
+    width: 110px;
+    height: 50px;
+    background-color: #ffffff;
+    color: #000000;
+    font-size: 24px;
+    padding: 0px 14px;
+    border-radius: 4px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+}
+.header__nav li .nav__btn:hover {
+    background-color: #e6e6e6;
+    color: #000000;
+}
+
+/* 共通の商品カードデザイン */
+.mypage__product-list,
+.product-list {
+    display: grid;
+    grid-template-columns: repeat(4, 290px);
+    padding: 0;
+    gap: 50px;
+    box-sizing: border-box;
+    max-width: calc(290px * 4 + 50px * 3);
+    margin: 0 auto;
+}
+.product-card {
+    text-align: center;
+    width: 290px;
+    background-color: #fff;
+}
+.product-card__image-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 290px;
+    height: 290px;
+    overflow: hidden;
+}
+.product-card__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+.product-card__name {
+    width: 100%;
+    font-family: 'Inter', sans-serif;
+    font-size: 25px;
+    min-height: 40px;
+    font-weight: 400;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: #000;
+    text-align: left;
+    margin: 0;
+    padding: 4px 0;
+    word-break: break-word;
+}
+.product-card__name a {
+    color: #000;
+    text-decoration: none;
+}
+.product-card__sold {
+    background: rgba(255, 0, 0, 0.8);
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    color: white;
+    font-weight: bold;
+    padding: 4px 8px;
+    border-radius: 4px;
+    z-index: 10;
+}
+.no-products {
+    width: 100%;
+    text-align: left;
+    font-size: 16px;
+    color: #666666;
+    font-weight: bold;
+}
+
+
+@media (min-width: 1400px) and (max-width: 1540px) {
+    .header__container {
+        padding: 0 20px;
+    }
+    .logo {
+        margin-left: 40px;
+    }
+    .header__nav {
+        margin-right: 10px;
+    }
+
+    /* 共通の商品カードデザイン */
+    .mypage__product-list,
+    .product-list {
+        display: grid;
+        grid-template-columns: repeat(4, 290px);
+        padding: 0;
+        gap: 50px;
+        box-sizing: border-box;
+        max-width: calc(290px * 4 + 50px * 3);
+        margin: 0 auto;
+    }
+}
+
+
+@media (min-width: 768px) and (max-width: 850px) {
+    .header {
+        width: 100%;
+    }
+    .header__container {
+            width: 100vw;
+            padding: 8px 10px;
+        }
+    .logo {
+        width: 130px;
+        height: auto;
+        margin-left: 48px;
+    }
+    .header__logo {
+        flex-shrink: 0;
+    }
+    .header__search {
+        flex: 1 1 auto;
+    }
+    .header__search form {
+        width: 100%;
+        max-width: 85%;
+    }
+    .header__search input {
+        padding: 6px 10px;
+        font-size: 14px;
+    }
+    .header__nav ul {
+        gap: 8px;
+    }
+    .header__nav li a,
+    .header__nav li .nav__btn {
+        font-size: 14px;
+        white-space: nowrap;
+        min-width: auto;
+    }
+    .header__nav li a {
+        padding: 2px 4px;
+    }
+    .header__nav li .nav__btn {
+        width: 100px;
+        padding: 1px 6px;
+    }
+    /* 共通の商品カードデザイン */
+    .product-card__image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+    }
+    .product-card__image-wrapper {
+        position: relative;
+        width: 100%;
+        max-width: 290px;
+        height: 290px;
+        overflow: hidden;
+    }
+    .mypage__product-list,
+    .product-list {
+        display: grid;
+        grid-template-columns: repeat(2, 290px);
+        gap: 45px;
+        box-sizing: border-box;
+        margin: 0 auto;
+        max-width: calc(290px * 2 + 45px * 1);
+    }
+    .product-card {
+        width: 100%;
+    }
+}

@@ -1,0 +1,216 @@
+.alert-success {
+    width: 100%;
+    padding: 10px 15px;
+    background-color: #d4edda;
+    font-size: 14px;
+    color: #155724;
+    font-weight: 700;
+    text-align: center;
+    box-sizing: border-box;
+    margin: 0 auto 20px auto;
+}
+.mypage__profile {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 40px;
+    margin-top: 70px;
+    margin-left: 299px;
+    gap: 55px;
+}
+.mypage__profile-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.mypage__profile-image-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+.mypage__profile-image--default {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background: #d9d9d9;
+}
+.mypage__profile-info {
+    width: 400px;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+.mypage__username {
+    font-family: Inter;
+    font-weight: 700;
+    font-size: 36px;
+    margin: 0;
+    word-break: break-word;
+    white-space: normal;
+    line-height: 1.2;
+}
+.rating-stars {
+    display: flex;
+    gap: 5px;
+    margin-left: -20px;
+}
+.star {
+    font-size: 38px;
+    color: #D9D9D9;
+}
+.star.filled {
+    color: #FFF048;
+}
+.mypage__profile-actions {
+    margin-left: auto;
+    width: 310px;
+    margin-right: 90px;
+}
+.mypage__edit-btn {
+    background: #fff;
+    color: #ff5555;
+    padding: 12px 30px;
+    border: 2px solid #ff5555;
+    font-size: 26px;
+    border-radius: 6px;
+    cursor: pointer;
+    width: 100%;
+    height: 59px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.mypage__tabs {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin-bottom: 10px;
+    margin-left: 140px;
+    gap: 40px;
+}
+.mypage__tab {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px;
+    padding: 8px 12px;
+    text-decoration: none;
+    color: #888;
+    width: 155px;
+    height: 40px;
+    font-family: Inter;
+    font-weight: 700;
+    font-size: 24px;
+    letter-spacing: 0%;
+    line-height: 1;
+    text-align: center;
+    white-space: nowrap;
+}
+.mypage__tab.active {
+    color: #ff0000;
+    font-weight: 700;
+}
+.mypage__tabs-border {
+    width: 100vw;
+    height: 1px;
+    background-color: #5f5f5f;
+    margin: 0 calc(-1 * (100vw - 100%)/2) 40px;
+}
+.mypage__product-list .mypage__product-card-link {
+    display: block;
+    text-decoration: none;
+    cursor: pointer;
+}
+.mypage__product-list .mypage__product-card-link:hover .product-card {
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transform: translateY(-2px);
+    transition: 0.2s;
+}
+.unread-badge {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #FF0000;
+    color: #FFFFFF;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1;
+    margin-left: 4px;
+    flex-shrink: 0;
+}
+.product-card__image-wrapper {
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+.unread-badge-card {
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20px;
+    height: 20px;
+    background-color: #FF0000;
+    color: #FFFFFF;
+    border-radius: 50%;
+    font-size: 10px;
+    font-weight: 700;
+    line-height: 1;
+}
+
+@media (min-width: 768px) and (max-width: 850px) {
+    .mypage__profile {
+        margin: 30px 40px;
+        gap: 20px;
+        justify-content: flex-start;
+    }
+    .mypage__profile-image,
+    .mypage__profile-image--default {
+        width: 120px;
+        height: 120px;
+        margin: 0;
+        border-radius: 50%;
+    }
+    .mypage__profile-info {
+        width: auto;
+        display: flex;
+        align-items: center;
+    }
+    .mypage__username {
+        font-size: 24px;
+        margin: 0;
+    }
+    .rating-stars {
+        margin-left: 0;
+    }
+    .star {
+        font-size: 30px;
+    }
+    .mypage__profile-actions {
+        width: auto;
+        margin-right: 5px;
+    }
+    .mypage__edit-btn {
+        width: 200px;
+        font-size: 20px;
+        height: 50px;
+        padding: 0 12px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        box-sizing: border-box;
+    }
+}
