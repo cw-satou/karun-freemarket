@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { Suspense, useEffect, useState } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import Link from "next/link";
 import { api } from "@/lib/api";
@@ -24,7 +24,7 @@ type MypageData = {
   transactions?: { id: number; status: string; unread_count: number; product: { id: number; item_name: string; image_url: string | null } }[];
 };
 
-export default function MypagePage() {
+function MypageContent() {
   const { user, loading: authLoading } = useAuth();
   const router = useRouter();
   const searchParams = useSearchParams();
@@ -144,5 +144,13 @@ export default function MypagePage() {
         </div>
       )}
     </div>
+  );
+}
+
+export default function MypagePage() {
+  return (
+    <Suspense fallback={<p className="text-center py-12 text-gray-400">読み込み中...</p>}>
+      <MypageContent />
+    </Suspense>
   );
 }

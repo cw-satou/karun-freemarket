@@ -1,12 +1,12 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { Suspense, useEffect, useState } from "react";
 import { useSearchParams, useRouter } from "next/navigation";
 import Link from "next/link";
 import { api, type Product } from "@/lib/api";
 import { useAuth } from "@/lib/auth";
 
-export default function HomePage() {
+function HomeContent() {
   const { user } = useAuth();
   const searchParams = useSearchParams();
   const router = useRouter();
@@ -107,5 +107,13 @@ export default function HomePage() {
         </div>
       )}
     </div>
+  );
+}
+
+export default function HomePage() {
+  return (
+    <Suspense fallback={<p className="text-center text-gray-400 py-12">読み込み中...</p>}>
+      <HomeContent />
+    </Suspense>
   );
 }

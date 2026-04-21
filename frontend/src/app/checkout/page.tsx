@@ -1,11 +1,11 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { Suspense, useEffect, useState } from "react";
 import { useSearchParams, useRouter } from "next/navigation";
 import { api, type ProductDetail } from "@/lib/api";
 import { useAuth } from "@/lib/auth";
 
-export default function CheckoutPage() {
+function CheckoutContent() {
   const searchParams = useSearchParams();
   const productId = searchParams.get("product_id");
   const router = useRouter();
@@ -135,5 +135,13 @@ export default function CheckoutPage() {
         </button>
       </form>
     </div>
+  );
+}
+
+export default function CheckoutPage() {
+  return (
+    <Suspense fallback={<p className="text-center py-12 text-gray-400">読み込み中...</p>}>
+      <CheckoutContent />
+    </Suspense>
   );
 }
